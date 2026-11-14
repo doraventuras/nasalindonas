@@ -18,19 +18,8 @@ perfis_referencia = {
     
 }
 
-df_ref = pd.DataFrame(perfis_referencia) 
-# 2. As vossas amostras do Paraná para teste
-amostras_parana = pd.DataFrame({
-    'Amostra_ID': ['Sample_PR_01', 'Sample_PR_02'],
-    'SIO2': [41.9, 35.1], 
-    'TIO2': [11.6, 44.9],
-    'AL2O3': [9.1,  14.8],
-    'MNO': [0.1, 0.3],
-    'MGO': [7.0, 0.4],
-    'CAO': [11, 0.3],
-    'NA20': [0.5, 0.2],
-    'K20': [0.3, 0.2]
-})
+df_dados = pd.read_csv('planilhaParana.csv')
+display(df_dados)
 
 features = ['SIO2', 'TIO2', 'AL2O3','MNO', 'MGO', 'CAO', 'NA20', 'K20']
 
